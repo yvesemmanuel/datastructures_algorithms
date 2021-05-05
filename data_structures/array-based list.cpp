@@ -1,13 +1,15 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-class AList {
+template <typename E> class AList {
+private:
 	int maxSize, listSize, curr;
-	int *listArray;
+	E *listArray;
 public:
 	AList(int size) {
 		maxSize = size;
 		listSize = curr = 0;
-		listArray = new int[maxSize];
+		listArray = new E[maxSize];
 	}
 	
 	~AList() { delete [] listArray; }
@@ -15,35 +17,35 @@ public:
 	void clear() {
 		delete [] listArray;
 		listSize = curr = 0;
-		listArray = new int[maxSize];
+		listArray = new E[maxSize];
 	}
 	
-	void insert(int it) {
+	void insert(E it) {
 		if (listSize < maxSize) {
 			for (int i = listSize; i > curr; i--)
 				listArray[i] = listArray[i - 1];
 			listArray[curr] = it;
 			listSize++;
 		}
-		else printf("List capacity exceeded.\n");
+		else cout << "List capacity exceeded." << endl;
 	}
 
-	void append(int it) {
+	void append(E it) {
 		if (listSize < maxSize) {
 			listArray[listSize++] = it;
 		}
-		else printf("List capacity exceeded.\n");
+		else cout << "List capacity exceeded." << endl;
 	}
 	
-	int remove() {
+	E remove() {
 		if ((curr >= 0) && (curr < listSize)) {
-			int it = listArray[curr];
+			E it = listArray[curr];
 			for (int i = curr; i < listSize - 1; i++)
 				listArray[i] = listArray[i + 1];
 			listSize--;
 			return it;
 		}
-		else printf("No element.\n");
+		else cout << "No element." << endl;
 	}
 	
 	void moveToStart() { curr = 0; }
@@ -57,24 +59,24 @@ public:
 	void moveToPos(int pos) {
 		if ((pos >= 0) && (pos <= listSize))
 			curr = pos;
-		else printf("Pos out of range.\n");		
+		else cout << "Pos out of range." << endl;
 	}
 	
-	int getValue() {
+	E getValue() {
 		if ((curr >= 0) && (curr < listSize))
 			return listArray[curr];
-		else printf("No current element.");
+		else cout << "No current element." << endl;
 	}
 	
 	void print() {
 		for (int i = 0; i < listSize; i++)
-			printf("%d ", listArray[i]);
-		printf("\n");
+			cout << listArray[i] << " ";
+		cout << endl;
 	}
 };
 
 int main() {
-	AList myList(2);
+	AList<int> myList(2);
 	
 	myList.insert(2);
 	myList.insert(3);

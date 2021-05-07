@@ -32,6 +32,13 @@ public:
 			cout << listArray[i] << " ";
 		cout << endl;
 	}
+	
+	bool check(int it) {
+		for (int i = 0; i < top; i++)
+			if (listArray[i] == it) return true;
+		
+		return false;
+	}
 };
 
 int main() {
@@ -40,12 +47,9 @@ int main() {
 	myStack.push(3);
 	myStack.push(4);
 	myStack.push(5);
-	cout << myStack.topValue() << endl;
 	myStack.print();
-	myStack.pop();
-	myStack.pop();
-	myStack.pop();
-	myStack.topValue();
+	cout << myStack.topValue() << endl;
+	cout << myStack.check(8);
 	
 	return 0;
 }

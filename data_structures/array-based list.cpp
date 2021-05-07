@@ -73,6 +73,13 @@ public:
 			cout << listArray[i] << " ";
 		cout << endl;
 	}
+	
+	bool check(int it) {
+		for (int i = 0; i < listSize; i++)
+			if (listArray[i] == it) return true;
+		
+		return false;
+	}
 };
 
 int main() {
@@ -84,8 +91,8 @@ int main() {
 	myList.remove();
 	myList.insert(4);
 	myList.insert(3);
-	
 	myList.print();
+	cout << myList.check(4);
 	
 	return 0;
 }

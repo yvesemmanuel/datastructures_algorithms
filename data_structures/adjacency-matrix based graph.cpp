@@ -120,11 +120,39 @@ public:
 				}
 		}
 	}
+	
+	void topsort() {
+		int Count[n()];
+		queue<int> Q;
+		int v, w;
+		for (v = 0; v < n(); v++) Count[v] = 0;
+		
+		for (v = 0; v < n(); v++)
+			for (w = first(v); w < n(); w = next(v,w))
+				Count[w]++;
+		
+		for (v = 0; v < n(); v++)
+			if (Count[v] == 0)
+				Q.push(v);
+				
+		while (Q.size() != 0) {
+			v = Q.front();
+			Q.pop();
+			cout << v << " ";
+			for (w = first(v); w < n(); w = next(v,w)) {
+				Count[w]--;
+				if (Count[w] == 0)
+					Q.push(w);
+			}
+		}
+		cout << endl;
+	}
+
 };
 
 
 int main() {
-	Graphm myGraph(10);
+	Graphm myGraph(6);
 	
 	cout << "Let's add some vertices to this graph..." << endl; 
 	myGraph.setEdge(0, 4, 1);
@@ -146,6 +174,12 @@ int main() {
 	
 	cout << "BFS traverse" << endl;
 	myGraph.BFS(0);
+	
+	cout << endl;
+	cout << endl;
+	
+	cout << "This graph is topological sort.." << endl;
+	myGraph.topsort();
 
 	return 0;
 }

@@ -21,6 +21,21 @@
 * Policy: LIFO = last-in, first-out;
 * The last element added to the stack will be the first to be removed.
 
+## [Graph](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/adjacency-matrix%20based%20graph.cpp)
+* A graph is a collection of nodes (vertices), some of them connected by edges, where |V| != 0.
+* A graph implemented as an **adjacency matrix** is recommended for a dense graph, and a graph implemented as an **adjacency list** is recommended for a sparse graph.
+* As an **adjacency matrix**, its time efficiency (graph traversal) belongs to **Θ(|V|²)**, and as an **adjacency list**, its time efficiency belongs to **Θ(|V|+|E|)**.
+
+#### Graph Traversals
+
+
+* DFS: depth-first search
+  * It starts at a selected arbitrary node as the root node in the graph and explores as far as possible along each branch before backtracking.
+
+
+* BFS: breadth-first search
+  * It starts at a selected arbitrary node as the root node in the graph and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.
+
 ## [Binary Search Tree](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/BST%20based%20dictionary.cpp)
 * **Tree**: Connected acyclic graph.
 * **m-ary tree**: every internal vertex has no more than m children

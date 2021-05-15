@@ -3,8 +3,8 @@ using namespace std;
 
 template <typename E>
 void inssort(E A[], int n) {
-	int i, j;
 	E v;
+	int i, j;
     for (i = 1; i < n; i++) {
         v = A[i];
         j = i - 1;

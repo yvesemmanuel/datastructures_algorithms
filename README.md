@@ -5,13 +5,13 @@
 * ± Predefined maximum size (alternative: dynamic arrays)
 * *+* No extra space with pointers (links)
 * − Space consumed by unused positions
-* **Time complexity** (worst and average case): **Access - θ(*1*)**, **Search - θ(*n*)**, **Insertion - θ(*n*)**, **Deletion - θ(*n*)**.
+* **Time complexity** (worst and average case): **Access - θ(*1*)**; **Search - θ(*n*)**; **Insertion - θ(*n*)**; **Deletion - θ(*n*)**.
 
 ## [Linked List](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/singly%20linked%20list.cpp)
 * *+* With no predefined maximum size
 * *+* No extra space for no longer accessible elements
 * − Space consumed by pointers (links)
-* **Time complexity** (worst and average case): **Access - θ(*n*)**, **Search - θ(*n*)**, **Insertion - θ(*1*)**, **Deletion - θ(*1
+* **Time complexity** (worst and average case): **Access - θ(*n*)**; **Search - θ(*n*)**; **Insertion - θ(*1*)**; **Deletion - θ(*1*)**.
 
 ## [Array-Based Queue](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/array-based%20queue.cpp)
 * Policy: FIFO = first-in, first-out;
@@ -22,3 +22,9 @@
 * The last element added to the stack will be the first to be removed.
 
 ## [Binary Search Tree](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/BST%20based%20dictionary.cpp)
+* **Tree**: Connected acyclic graph.
+* **m-ary tree**: every internal vertex has no more than m children
+* m-ary tree, where m = 2: **binary tree**
+* Ordered binary tree: **binary search tree** (BST)
+* **Time complexity** (average case): **Access - θ(*log n*)**; **Search - θ(*log n*)**; **Insertion - θ(*log n*)**; **Deletion - θ(*log n*)**.
+* **Time complexity** (worst case): **Access - θ(*n*)**; **Search - θ(*n*)**; **Insertion - θ(*n*)**; **Deletion - θ(*n*)**.

@@ -7,7 +7,7 @@
 * − Space consumed by unused positions
 * **Time complexity** (worst and average case): **Access - θ(*1*)**; **Search - θ(*n*)**; **Insertion - θ(*n*)**; **Deletion - θ(*n*)**.
 
-### [Linked List](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/singly%20linked%20list.cpp)
+### [Singly Linked List](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/singly%20linked%20list.cpp)
 * *+* With no predefined maximum size
 * *+* No extra space for no longer accessible elements
 * − Space consumed by pointers (links)
@@ -35,6 +35,9 @@
 * BFS: breadth-first search
   * It starts at a selected arbitrary node as the root node in the graph and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level.
 
+* Topological Sorting
+  * Let G be a **DAG** (directed acyclic graph), a topological sorting is a linear ordering of its vertices such that for every directed edge 'uv' from vertex 'u' to vertex 'v', 'u' comes before 'v' in the ordering.
+
 ### [Binary Search Tree](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/BST%20based%20dictionary.cpp)
 * **Tree**: Connected acyclic graph.
 * **m-ary tree**: every internal vertex has no more than m children
@@ -53,7 +56,7 @@
 * Space complexity: **O(*1*)**
 * **Design strategy: brute force**
 
-### [Bubble Sort](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/sorting/insertion%20sort%20(decrease-and-conquer).cpp)
+### [Bubble Sort](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/sorting/bubble%20sort.cpp)
 * It's a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. 
 * *+* Simple implementation
 * Time complexity: **O(*n²*)**

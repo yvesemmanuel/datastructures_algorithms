@@ -182,14 +182,13 @@ int main() {
 	int distances[5];
 	
 	cout << "Let's add some vertices to this graph..." << endl; 
-	myGraph.setEdge(0, 1, -1);
-	myGraph.setEdge(0, 2, 4);
-	myGraph.setEdge(1, 2, 3);
-	myGraph.setEdge(1, 3, 2);
-	myGraph.setEdge(1, 4, 2);
-	myGraph.setEdge(3, 1, 1);
-	myGraph.setEdge(4, 3, -3);
-	myGraph.setEdge(3, 2, -5);
+	myGraph.setEdge(0, 1, 10);
+	myGraph.setEdge(0, 2, 3);
+	myGraph.setEdge(0, 3, 20);
+	myGraph.setEdge(1, 3, 5);
+	myGraph.setEdge(2, 1, 2);
+	myGraph.setEdge(2, 4, 15);
+	myGraph.setEdge(3, 4, 11);
 	
 	cout << "Now let's get the shortest path from all vertices to 0" << endl;
 	myGraph.bellmanford(distances, 0);

@@ -91,3 +91,17 @@
 * *+* In-place
 * *-* Not stable
 * **Design strategy: divide-and-conquer**
+
+### [Dijkstra](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/single-source%20shortest%20paths/dijkstra.cpp)
+* Let G be a weighted graph and *v* (source) a vertice that belongs to G, finds the shortest path from *v* to all other vertices in G.
+
+* It can't be used on weighted graphs with negative weights
+* Time complexity: **O(|*V²*|)**, V = number of vertices
+* **Design strategy: greedy algorithms**
+
+### [Bellman-Ford](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/single-source%20shortest%20paths/bellman-ford.cpp)
+* Let G be a weighted graph and *v* (source) a vertice that belongs to G, finds the shortest path from *v* to all other vertices in G.
+
+* It can be used on weighted graphs with negative cycles
+* Time complexity: **O(|*V³*|)**, V = number of vertices
+* **Design strategy: dynamic programming**

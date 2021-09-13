@@ -106,7 +106,7 @@
 * Time complexity: **O(|*V³*|)**, V = number of vertices
 * **Design strategy: dynamic programming**
 
-### [Floyd-Warshall]
+### [Floyd-Warshall](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/all-pairs%20shortest%20paths/floyd-warshall.cpp)
 * Let G be a weighted graph, finds the shortest path between all pairs of nodes in G.
 * Floyd algorithm: can be used on weighted graphs with negative weights (but no negative cycles)
   * Based on the Warshall algorithm for computing transitive closures

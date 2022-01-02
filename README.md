@@ -1,4 +1,4 @@
-# Class implementations of Algorithms and Data Structures
+# Algorithms and Data Structures implementations
 
 # [Data Structures](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/data_structures)
 ### [Array-Based List](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/array-based%20list.cpp)

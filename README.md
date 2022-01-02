@@ -5,13 +5,13 @@
 * ± Predefined maximum size (alternative: dynamic arrays)
 * *+* No extra space with pointers (links)
 * − Space consumed by unused positions
-* **Time complexity** (worst and average case): **Access - θ(*1*)**; **Search - θ(*n*)**; **Insertion - θ(*n*)**; **Deletion - θ(*n*)**.
+* **Time complexity** (worst and average case): **Access - θ(*1*)** | **Search - θ(*n*)** | **Insertion - θ(*n*)** | **Deletion - θ(*n*)**.
 
 ### [Singly Linked List](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/singly%20linked%20list.cpp)
 * *+* With no predefined maximum size
 * *+* No extra space for no longer accessible elements
 * − Space consumed by pointers (links)
-* **Time complexity** (worst and average case): **Access - θ(*n*)**; **Search - θ(*n*)**; **Insertion - θ(*1*)**; **Deletion - θ(*1*)**.
+* **Time complexity** (worst and average case): **Access - θ(*n*)** | **Search - θ(*n*)** | **Insertion - θ(*1*)** | **Deletion - θ(*1*)**.
 
 ### [Array-Based Queue](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/array-based%20queue.cpp)
 * Policy: FIFO = first-in, first-out;
@@ -43,13 +43,21 @@
 * **m-ary tree**: every internal vertex has no more than m children
 * m-ary tree, where m = 2: **binary tree**
 * Ordered binary tree: **binary search tree** (BST)
-* **Time complexity** (average case): **Access - θ(*log n*)**; **Search - θ(*log n*)**; **Insertion - θ(*log n*)**; **Deletion - θ(*log n*)**.
-* **Time complexity** (worst case): **Access - θ(*n*)**; **Search - θ(*n*)**; **Insertion - θ(*n*)**; **Deletion - θ(*n*)**.
+* **Time complexity** (average case): **Access - θ(*log n*)** | **Search - θ(*log n*)** | **Insertion - θ(*log n*)** | **Deletion - θ(*log n*)**.
+* **Time complexity** (worst case): **Access - θ(*n*)** | **Search - θ(*n*)** | **Insertion - θ(*n*)** | **Deletion - θ(*n*)**.
 
+### [AVL Tree](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/data_structures/AVL%20tree.cpp)
+* The balance factor of every node is either -1, 0 or 1.
+* Difference between the heights of the left and right subtrees.
+* Height of the empty tree is -1.
+* **Tree**: Self-balancing binary search tree
+* **Rotation**: local transformation to rebalance the tree.
+* **Time complexity** (average case): **Access - θ(*log n*)** | **Search - θ(*log n*)** | **Insertion - θ(*log n*)** | **Deletion - θ(*log n*)**.
+* **Time complexity** (worst case): **Access - θ(*log n*)** | **Search - θ(*log n*)** | **Insertion - θ(*log n*)** | **Deletion - θ(*log n*)**.
 
 # [Algorithms](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms)
-## [Sorting](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms/sorting)
 #### You should consider the worst case for all time and space complexity.
+## [Sorting](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms/sorting)
 
 ### [Seletion Sort](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/sorting/selection%20sort%20(brute%20force).cpp)
 * It's an in-place comparison sorting algorithm. It has an **O(*n²*)** time complexity, which makes it inefficient on large lists, and generally performs worse than the similar insertion sort.
@@ -92,6 +100,8 @@
 * *-* Not stable
 * **Design strategy: divide-and-conquer**
 
+## [Single-Source Shortest Path](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms/single-source%20shortest%20paths)
+
 ### [Dijkstra](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/single-source%20shortest%20paths/dijkstra.cpp)
 * Let G be a weighted graph and *v* (source) a vertice that belongs to G, finds the shortest path from *v* to all other vertices in G.
 
@@ -106,6 +116,8 @@
 * Time complexity: **O(|*V³*|)**, V = number of vertices
 * **Design strategy: dynamic programming**
 
+## [All-Pairs Shortest Paths](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms/single-source%20shortest%20paths)
+
 ### [Floyd-Warshall](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/all-pairs%20shortest%20paths/floyd-warshall.cpp)
 * Let G be a weighted graph, finds the shortest path between all pairs of nodes in G.
 * Floyd algorithm: can be used on weighted graphs with negative weights (but no negative cycles)
@@ -113,3 +125,11 @@
 
 * Time complexity: **O(|*V³*|)**, V = number of vertices
 * **Design strategy: dynamic programming**
+
+## [Dynamic Programming](https://github.com/yvesemmanuel/datastructures_algorithms/tree/main/algorithms/dynamic%20programming%20problems)
+
+### [Coin Row](https://github.com/yvesemmanuel/datastructures_algorithms/blob/main/algorithms/dynamic%20programming%20problems/coin-row%20problem.cpp)
+* There is a row of n coins whose values are some positive integers C1, C2, ..., Cn not necessarily distinct. Goal: pick up the maximum amount of money, but not picking up two adjacent coins.
+* **Recurrence relation**:
+  * F(n) = max{cn + F(n − 2), F(n − 1)}, for n > 1
+  * F(0) = 0 e F(1) = c1
